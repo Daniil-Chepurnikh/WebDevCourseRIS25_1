@@ -3,40 +3,49 @@
     
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Форма авторизации Даниил Чепурных РИС25-1</title>
         <link rel="stylesheet" href="styles.css"/>
-        <link rel="icon" href="https://i.pinimg.com/736x/bf/37/3a/bf373a33b3e8e0b4ecf5b70acb141510.jpg" sizes="64x64" alt="Логотип">
+        <link rel="icon" href="https://i.pinimg.com/736x/bf/37/3a/bf373a33b3e8e0b4ecf5b70acb141510.jpg" sizes="32x32">
         
-        <link rel="preconnect" href="https://googleapis.com">
-        <link rel="preconnect" href="https://gstatic.com" crossorigin>
-        <link href="https://googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
- 
-        </head>             
+        <script src="index.js"></script>
+    </head>             
     
     <body>
             <header class = "header">
-               <img src="/images/logo.jpg" alt="" width="50" height="75">  
+               <img id="logo" src="/images/logoDC.png" alt="Логотип" width="150" height="100">  
             </header>
             
             <main class ="main">
                 <h1>Авторизация</h1>
-                <form method="POST" action="">
-                    <label> 
-                        Введите электронную почту
-                        <input type="email" name="email" required placeholder="example@gmail.com" autocomplete="email">
-                    </label>
-                    <label>
-                        Введите пароль
-                        <input type="password" name="password" required autocomplete="current-password">
-                    </label>                 
-                    <label>
-                        <input type="checkbox" name="remember" value="on">
-                        Сохранять сессию
-                    </label>
+                <form class="formEmail" method="Post" action="">
+                    
+                    <div class="formGroup">
+                        <label class="labelInput" for="email">Введите электронную почту</label>
+                        <input  required id="email" type="email" name="email" autocomplete="email" placeholder="example@gmail.com">
+                    </div>
+                    
+                    <div class="formGroup">
+                        <label class="labelInput" for="password">Введите пароль</label>
+                        <input required id="password" type="password" name="password" autocomplete="current-password">
+                    </div>   
+                    
+                    <div class="formGroup">
+                        <label class="labelInput" for="remember">Сохранять сессию</label>
+                        <input id="remember" type="checkbox" name="remember" value="on">
+                    </div>
+                    
                     <button type="submit">Войти</button>
+                </form>
+
+                <form class="formMax">
+                    <button type="button">Войти через MAX</button>
+                    <button type="button">Войти через Госуслуги</button>
                 </form>
             </main>
             
@@ -44,10 +53,27 @@
                 <h2>Связаться со мной</h2>
                 <nav class="contactWithMe">
                     <ul>
-                        <li><a href="https://vk.ru/menyaitakznaut" target="_blank" rel="noopener noreferrer">VK</a></li>
-                        <li>daigchepurnykh@edu.hse.ru</li>
+                        <li>
+                            <a href="https://vk.ru/menyaitakznaut" target="_blank" rel="noopener noreferrer" title="Написать мне в ВКонтакте"
+                            aria-label="VK — написать сообщение в ВКонтакте">
+                            VK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:daigchepurnykh@edu.hse.ru" title="Написать письмо на daigchepurnykh@edu.hse.ru"
+                            aria-label="Написать письмо на daigchepurnykh@edu.hse.ru">
+                            daigchepurnykh@edu.hse.ru
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/MenyaITakZnaut" target="_blank" rel="noopener noreferrer" title="Написать мне в Телеграм"
+                            aria-label="TG — написать сообщение в Телеграм">
+                            TG
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+                <p>Создано на этапе работы с нативными технологиями</p>
             </footer>
         
         </body>
