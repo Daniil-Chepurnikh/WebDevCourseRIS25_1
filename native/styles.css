@@ -55,12 +55,12 @@
     }
     
     .formEmail,
-    .formMax
+    .formSocialMedia
     {
         margin-bottom: 15px;
     }
 
-    .formMax
+    .formSocialMedia
     {
         gap: 15px;
     }
