@@ -3,6 +3,15 @@
         mix-blend-mode: multiply;
     }
     
+    button
+    {
+        border: 3px solid;
+        background-color: lightgrey;
+        border-color: rgb(15, 66, 122);
+        color: rgb(217, 131, 0);
+        font-weight: 600;
+    }
+
     .labelInput
     {
         padding-bottom: 0;
@@ -86,6 +95,8 @@
     {
         color: inherit;
         font-style: italic;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
 
     .contactWithMe ul
