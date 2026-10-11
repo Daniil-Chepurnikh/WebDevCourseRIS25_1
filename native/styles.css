@@ -5,8 +5,7 @@
     
     button
     {
-        border: 3px solid;
-        border-color: rgb(15, 66, 122);
+        border: 3px solid rgb(15, 66, 122);
         color: rgb(217, 131, 0);
         font-weight: 500;
         border-radius: 12px;
@@ -32,8 +31,7 @@
 
     input
     {
-        border-color: rgb(15, 66, 122);
-        border: 2px solid;
+        border: 2px solid rgb(15, 66, 122);
         border-radius: 12px;
         width: 70%;
         max-width: 333px;
