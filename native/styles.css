@@ -1,127 +1,127 @@
-    #logo 
-    {
-        mix-blend-mode: multiply;
-    }
-    
-    button
-    {
-        border: 3px solid rgb(15, 66, 122);
-        color: rgb(217, 131, 0);
-        font-weight: 500;
-        border-radius: 12px;
-        width: 50%;
-        max-width: 333px;
-    }
+#logo
+{
+    mix-blend-mode: multiply;
+}
 
-    .labelInput,
-    .labelCheckbox
-    {
-        padding-bottom: 0;
-        margin-top: 0;
-        font-size: 14px;
-    }
+button
+{
+    width: 50%;
+    max-width: 333px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 131, 0);
+    border: 3px solid rgb(15, 66, 122);
+    border-radius: 12px;
+}
 
-    input[type="checkbox"] 
-    {
-        accent-color: rgb(15, 66, 122);
-        height: 13px;
-        width: 4%;
-        max-width: 100px;
-    }
+.labelInput,
+.labelCheckbox
+{
+    margin-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+}
 
-    input
-    {
-        border: 2px solid rgb(15, 66, 122);
-        border-radius: 12px;
-        width: 70%;
-        max-width: 333px;
-    }
+input[type="checkbox"]
+{
+    width: 1.5%;
+    max-width: 100px;
+    height: 13px;
+    accent-color: rgb(15, 66, 122);
+}
 
-    
-    h1
-    {
-        color: rgb(217, 131, 0);
-        padding-bottom: 0px;
-        padding-left: 15px;
-        margin-top: 0;
-        font-size: 35px;
-        font-weight: bold;
-        margin: auto;
-    }
-    
-    h2
-    {
-        color: rgb(217, 131, 0);
-        font-size: 24px;
-        font-weight: 300;
-        padding-left: 33px;
-        padding-bottom: 0px;
-        margin: auto;
-    }
+input
+{
+    width: 70%;
+    max-width: 333px;
+    border: 2px solid rgb(15, 66, 122);
+    border-radius: 12px;
+}
 
-    main
-    {
-        flex: 1;
-    }
+h1
+{
+    margin: auto;
+    margin-top: 0;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(217, 131, 0);
+}
 
-    form
-    {
-        color: rgb(46, 35, 25);
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        gap: 5px;
-        max-width: 500px;
-        font-size: 20px;
-        width: 100%;
-        max-width: 777px;
-    }
-    
-    .formEmail,
-    .formSocialMedia
-    {
-        margin-bottom: 15px;
-    }
+h2
+{
+    margin: auto;
+    padding-bottom: 0px;
+    padding-left: 33px;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(217, 131, 0);
+}
 
-    .formSocialMedia
-    {
-        gap: 15px;
-        display: flex;
-        align-items: center;
-    }
-    
-    body
-    {
-        background-color: rgb(249, 246, 240);
-        font-family: 'Noto Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+main
+{
+    flex: 1;
+}
 
-    footer
-    {
-        color: rgb(15, 66, 122);
-        font-size: 11px;        
-    }
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    max-width: 777px;
+    margin: auto;
+    gap: 5px;
+    font-size: 20px;
+    color: rgb(46, 35, 25);
+}
 
-    .contactWithMe a
-    {
-        color: inherit;
-        font-style: italic;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-    }
+.formEmail,
+.formSocialMedia
+{
+    margin-bottom: 15px;
+}
 
-    .contactWithMe ul
-    {
-        list-style: none;
-        padding-left: 25px;
-    }
+.formSocialMedia
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    .contactWithMe
-    {
-        font-size: 15px;
-    }
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(249, 246, 240);
+}
+
+footer
+{
+    font-size: 11px;
+    color: rgb(15, 66, 122);
+}
+
+.contactWithMe a
+{
+    color: inherit;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.contactWithMe ul
+{
+    padding-left: 25px;
+    list-style: none;
+}
+
+.contactWithMe
+{
+    font-size: 15px;
+}
