@@ -29,6 +29,11 @@ button
     font-size: 14px;
 }
 
+.labelInput
+{
+    display: block;
+}
+
 input[type="checkbox"]
 {
     width: 1.5%;
