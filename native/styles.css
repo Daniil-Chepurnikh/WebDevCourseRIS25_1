@@ -8,11 +8,13 @@
 #logo
 {
     mix-blend-mode: multiply;
+    margin: 0;
+    padding: 0;
 }
 
 button
 {
-    width: 50%;
+    width: 100%;
     max-width: 333px;
     font-weight: 500;
     color: rgb(255, 255, 255);
@@ -32,6 +34,7 @@ button
     margin-top: 0;
     padding-bottom: 0;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .labelInput
@@ -49,7 +52,7 @@ input[type="checkbox"]
 
 input
 {
-    width: 70%;
+    width: 100%;
     max-width: 333px;
     border: 2px solid rgb(15, 66, 122);
     border-radius: 12px;
@@ -86,7 +89,6 @@ form
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 500px;
     max-width: 777px;
     margin: auto;
     gap: 5px;
