@@ -21,6 +21,11 @@ button
     border-radius: 12px;
 }
 
+.formSocialMedia button
+{
+    background-color: rgb(246, 176, 70);
+}
+
 .labelInput,
 .labelCheckbox
 {
