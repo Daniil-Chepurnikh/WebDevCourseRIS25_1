@@ -1,14 +1,5 @@
-function onMaxButtonClick()
-{
+function onMaxButtonClick() {}
 
-}
+function onGosuslugiButtonClick() {}
 
-function onGosuslugiButtonClick()
-{
-
-}
-
-function post()
-{
-
-}
+function post() {}
