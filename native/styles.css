@@ -43,7 +43,17 @@ button
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
+}
+
+.checkboxEntry
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vh;
+    margin-top: 0;
+    margin-bottom: 2vh;
 }
 
 .labelInput
@@ -104,7 +114,7 @@ form
     width: 100%;
     max-width: 777px;
     margin: auto;
-    gap: 1vh;
+    gap: 0;
     font-size: 20px;
     color: rgb(46, 35, 25);
 }
