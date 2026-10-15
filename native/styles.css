@@ -1,100 +1,169 @@
-    #logo 
-    {
-        mix-blend-mode: multiply;
-    }
-    
-    .labelInput
-    {
-        padding-bottom: 0;
-        margin-top: 0;
-        font-size: 14px;
-    }
+/* TODO: Придумать анимации
+@keyframes 
+{
 
-    input[type="checkbox"] 
-    {
-        accent-color: rgb(15, 66, 122);
-        width: 13px;
-        height: 13px;
-    }
+}
+*/
 
-    
-    h1
-    {
-        color: rgb(217, 131, 0);
-        padding-bottom: 0px;
-        padding-left: 33px;
-        margin-top: 0;
-        font-size: 35px;
-        font-weight: bold;
-    }
-    
-    h2
-    {
-        color: rgb(217, 131, 0);
-        font-size: 24px;
-        font-weight: 300;
-        padding-left: 15px;
-        margin: auto;
-        padding: auto;
-    }
+#logo
+{
+    mix-blend-mode: multiply;
+    margin: 0;
+    padding: 0;
+}
 
-    main
-    {
-        flex: 1;
-    }
+button
+{
+    width: 100%;
+    max-width: 333px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 131, 0);
+    border: 3px solid rgb(15, 66, 122);
+    border-radius: 12px;
+}
 
-    form
-    {
-        color: rgb(46, 35, 25);
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        gap: 5px;
-        max-width: 500px;
-        font-size: 20px;
-    }
-    
-    .formEmail,
-    .formSocialMedia
-    {
-        margin-bottom: 15px;
-    }
+.formSocialMedia button
+{
+    background-color: rgb(246, 176, 70);
+}
 
-    .formSocialMedia
-    {
-        gap: 15px;
-    }
-    
-    body
-    {
-        background-color: rgb(249, 246, 240);
-        font-family: 'Noto Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+.labelInput,
+.labelCheckbox
+{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
 
-    footer
-    {
-        color: rgb(15, 66, 122);
-        font-size: 11px;        
-    }
+.formEntry
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    margin-bottom: 2vh;
+}
 
-    .contactWithMe a
-    {
-        color: inherit;
-        font-style: italic;
-    }
+.checkboxEntry
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vh;
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
 
-    .contactWithMe ul
-    {
-        list-style: none;
-        padding-left: 25px;
-    }
+.labelInput
+{
+    display: block;
+}
 
-    .contactWithMe
-    {
-        font-size: 15px;
-    }
+input[type="checkbox"]
+{
+    width: 1.5%;
+    max-width: 100px;
+    height: 2vh;
+    accent-color: rgb(15, 66, 122);
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input
+{
+    width: 100%;
+    max-width: 333px;
+    border: 2px solid rgb(15, 66, 122);
+    border-radius: 12px;
+    margin: 0;
+}
+
+h1
+{
+    margin: auto;
+    margin-top: 0;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(217, 131, 0);
+}
+
+h2
+{
+    margin: auto;
+    padding-bottom: 0px;
+    padding-left: 33px;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(217, 131, 0);
+}
+
+main
+{
+    flex: 1;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 777px;
+    margin: auto;
+    gap: 0;
+    font-size: 20px;
+    color: rgb(46, 35, 25);
+}
+
+.formEmail,
+.formSocialMedia
+{
+    margin-bottom: 2vh;
+}
+
+.formSocialMedia
+{
+    display: flex;
+    align-items: left;
+    gap: 2vh;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(249, 246, 240);
+}
+
+footer
+{
+    font-size: 11px;
+    color: rgb(15, 66, 122);
+}
+
+.contactWithMe a
+{
+    color: inherit;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.contactWithMe ul
+{
+    padding-left: 25px;
+    list-style: none;
+}
+
+.contactWithMe
+{
+    font-size: 15px;
+}

@@ -7,40 +7,42 @@
 
         <title>Форма авторизации Даниил Чепурных РИС25-1</title>
         <link rel="stylesheet" href="styles.css"/>
-        <link rel="icon" href="https://i.pinimg.com/736x/bf/37/3a/bf373a33b3e8e0b4ecf5b70acb141510.jpg" sizes="32x32">
+        <link rel="icon" href="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <script src="index.js"></script>
+        <script src="script.js"></script>
     </head>             
     
     <body>
             <header class = "header">
-               <img id="logo" src="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000" alt="Логотип" width="150" height="100">  
+               <img id="logo" src="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000"
+               alt="Логотип разработчика формы авторизации" width="150" height="100">  
             </header>
             
             <main class ="main">
                 <h1>Авторизация</h1>
                 <form class="formEmail" method="post" action="" aria-label="Форма входа по email">
                     
-                    <div class="formGroup">
+                    <div class="formEntry">
                         <label class="labelInput" for="email">Введите электронную почту</label>
                         <input  required id="email" type="email" name="email" autocomplete="email" placeholder="example@gmail.com">
                     </div>
                     
-                    <div class="formGroup">
+                    <div class="formEntry">
                         <label class="labelInput" for="password">Введите пароль</label>
                         <input required id="password" type="password" name="password" autocomplete="current-password">
-                    </div>   
-                    
-                    <div class="formGroup">
-                        <label class="labelInput" for="remember">Сохранять сессию</label>
-                        <input id="remember" type="checkbox" name="remember" value="on">
                     </div>
                     
-                    <button type="submit">Войти</button>
+                    <div class="checkboxEntry">
+                        <input id="remember" type="checkbox" name="remember" value="on">
+                        <label class="labelCheckbox" for="remember">Сохранять сессию</label>
+                    </div>
+                    
+                    <button type="submit" title="Войти по Email" aria-label="Войти по Email">
+                        Войти</button>
                 </form>
 
                 <form class="formSocialMedia" aria-label="Форма входа через социальные сети">
@@ -73,7 +75,7 @@
                         </li>
                     </ul>
                 </nav>
-                <p>Создано на этапе работы с нативными технологиями</p>
+                <pre>Создано на этапе работы с нативными технологиями</pre>
             </footer>
         
         </body>
