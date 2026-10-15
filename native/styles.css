@@ -63,9 +63,10 @@ button
 
 input[type="checkbox"]
 {
-    width: 1.5%;
-    max-width: 100px;
-    height: 2vh;
+    width: 2.5vw;
+    max-width: 15px;
+    max-height: 15px;
+    height: 2.5h;
     accent-color: rgb(15, 66, 122);
     line-height: 0;
     margin: 0;
