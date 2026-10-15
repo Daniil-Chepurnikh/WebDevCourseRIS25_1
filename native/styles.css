@@ -105,7 +105,7 @@ form
 .formSocialMedia
 {
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 15px;
 }
 
