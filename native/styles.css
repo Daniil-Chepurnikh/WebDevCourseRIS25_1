@@ -20,15 +20,15 @@ button {
   width: 100%;
   max-width: 333px;
   font-weight: 500;
-  color: rgb(255, 255, 255);
-  background-color: rgb(217, 131, 0);
-  border: 3px solid rgb(15, 66, 122);
+  color: rgb(255 255 255);
+  background-color: rgb(217 131 0);
+  border: 3px solid rgb(15 66 122);
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
 }
 
 .formSocialMedia button {
-  background-color: rgb(246, 176, 70);
+  background-color: rgb(246 176 70);
 }
 
 .labelInput,
@@ -64,8 +64,8 @@ input[type="checkbox"] {
   width: 2.5vw;
   max-width: 15px;
   max-height: 15px;
-  height: 2.5h;
-  accent-color: rgb(15, 66, 122);
+  height: 2.5vh;
+  accent-color: rgb(15 66 122);
   line-height: 0;
   margin: 0;
   padding: 0;
@@ -74,7 +74,7 @@ input[type="checkbox"] {
 input {
   width: 100%;
   max-width: 333px;
-  border: 2px solid rgb(15, 66, 122);
+  border: 2px solid rgb(15 66 122);
   border-radius: 12px;
   margin: 0;
 }
@@ -82,20 +82,20 @@ input {
 h1 {
   margin: auto;
   margin-top: 0;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   padding-left: 15px;
   font-size: 35px;
   font-weight: bold;
-  color: rgb(217, 131, 0);
+  color: rgb(217 131 0);
 }
 
 h2 {
   margin: auto;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   padding-left: 33px;
   font-size: 24px;
   font-weight: 300;
-  color: rgb(217, 131, 0);
+  color: rgb(217 131 0);
 }
 
 main {
@@ -110,7 +110,7 @@ form {
   margin: auto;
   gap: 0;
   font-size: 20px;
-  color: rgb(46, 35, 25);
+  color: rgb(46 35 25);
 }
 
 .formEmail,
@@ -120,7 +120,7 @@ form {
 
 .formSocialMedia {
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   gap: 2vh;
 }
 
@@ -131,12 +131,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans", sans-serif;
-  background-color: rgb(249, 246, 240);
+  background-color: rgb(249 246 240);
 }
 
 footer {
   font-size: 11px;
-  color: rgb(15, 66, 122);
+  color: rgb(15 66 122);
 }
 
 .contactWithMe a {
