@@ -5,6 +5,11 @@
 }
 */
 
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 #logo {
   mix-blend-mode: multiply;
   margin: 0;
@@ -80,19 +85,18 @@ input {
 }
 
 h1 {
-  margin: auto;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 15px;
+  margin-top: 1vh;
+  padding-bottom: 3vh;
+  padding-left: 1vw;
   font-size: 35px;
   font-weight: bold;
   color: rgb(217 131 0);
 }
 
 h2 {
-  margin: auto;
+  margin-top: 0;
   padding-bottom: 0;
-  padding-left: 33px;
+  padding-left: 2vw;
   font-size: 24px;
   font-weight: 300;
   color: rgb(217 131 0);
