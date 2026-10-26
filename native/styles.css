@@ -81,12 +81,11 @@ input[type="checkbox"] {
   padding: 0;
 }
 
-input {
+.formEntry input {
   width: 100%;
   max-width: 333px;
   border: 2px solid rgb(15 66 122);
   border-radius: 12px;
-  margin: 0;
 }
 
 h1 {
