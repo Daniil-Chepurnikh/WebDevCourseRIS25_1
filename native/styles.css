@@ -30,7 +30,7 @@ button {
   width: 100%;
   max-width: 333px;
   font-weight: 500;
-  color: rgb(255 255 255);
+  color: rgb(46 35 25);
   background-color: rgb(217 131 0);
   border: 3px solid rgb(15 66 122);
   border-radius: 12px;
@@ -127,8 +127,6 @@ form {
 }
 
 .formSocialMedia {
-  display: flex;
-  align-items: flex-start;
   gap: 2vh;
 }
 
