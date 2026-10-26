@@ -18,7 +18,8 @@
       rel="stylesheet"
     />
 
-    <script src="script.js"></script>
+    <!-- сначала загружает страницу -->
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
       <h1>Авторизация</h1>
       <form
         class="formEmail"
-        method="post"
+        method="Post"
         action=""
         aria-label="Форма входа по email"
       >
@@ -74,6 +75,7 @@
           type="submit"
           title="Войти по Email"
           aria-label="Войти по Email"
+          id="Enter"
         >
           Войти
         </button>
@@ -83,8 +85,8 @@
         class="formSocialMedia"
         aria-label="Форма входа через социальные сети"
       >
-        <button type="button">Войти через MAX</button>
-        <button type="button">Войти через Госуслуги</button>
+        <button type="button" id="MaxEnter">Войти через MAX</button>
+        <button type="button" id="GosuslugiEnter">Войти через Госуслуги</button>
       </form>
     </main>
 
