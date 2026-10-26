@@ -6,15 +6,15 @@ function OnGosuslugiButtonClick() {
   alert("Кнопка Gosuslugi нажата!");
 }
 
-function Post() {
-  alert("Кнопка нажата!");
-}
 
-// Находим кнопку по id
-const buttonEnter = document.getElementById("Enter");
+const mainForm = document.querySelector(".formEmail");
 
-if (buttonEnter) {
-  buttonEnter.addEventListener("click", Post);
+if (mainForm) {
+  mainForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Кнопка нажата!");
+    mainForm.reset();
+  });
 }
 
 const buttonMax = document.getElementById("MaxEnter");
