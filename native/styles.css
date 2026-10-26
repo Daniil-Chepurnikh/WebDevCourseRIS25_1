@@ -28,7 +28,6 @@ html {
 
 button:hover {
   opacity: 0.7;
-  cursor: pointer;
 }
 
 button {
@@ -40,6 +39,7 @@ button {
   border: 3px solid rgb(15 66 122);
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .formSocialMedia button {
@@ -58,21 +58,17 @@ button {
 .formEntry {
   display: flex;
   flex-direction: column;
-  gap: 0.5vh;
-  margin-bottom: 2vh;
+  gap: 0.1rem;
+  margin-bottom: 1rem;
 }
 
 .checkboxEntry {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5vh;
+  gap: 0.1rem;
   margin-top: 0;
-  margin-bottom: 2vh;
-}
-
-.labelInput {
-  display: block;
+  margin-bottom: 1rem;
 }
 
 input[type="checkbox"] {
@@ -94,12 +90,13 @@ input[type="checkbox"] {
 }
 
 h1 {
-  margin-top: 1vh;
-  padding-bottom: 3vh;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
   padding-left: 1vw;
   font-size: 35px;
   font-weight: bold;
   color: rgb(217 131 0);
+  margin-bottom: 0;
 }
 
 h2 {
@@ -109,6 +106,7 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   color: rgb(217 131 0);
+  margin-bottom: 0;
 }
 
 main {
@@ -128,11 +126,11 @@ form {
 
 .formEmail,
 .formSocialMedia {
-  margin-bottom: 2vh;
+  margin-bottom: 1rem;
 }
 
 .formSocialMedia {
-  gap: 2vh;
+  gap: 1rem;
 }
 
 body {
@@ -146,7 +144,7 @@ body {
 }
 
 footer {
-  font-size: 11px;
+  font-size: 14px;
   color: rgb(15 66 122);
 }
 
