@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Лаба форма авторизации">
+    <meta name="description" content="Лаба форма авторизации" />
 
     <title>Форма авторизации Даниил Чепурных РИС25-1</title>
     <link rel="stylesheet" href="styles.css" />
@@ -35,12 +35,7 @@
 
     <main class="main">
       <h1>Авторизация</h1>
-      <form
-        class="formEmail"
-        method="Post"
-        action=""
-        aria-label="Форма входа по email"
-      >
+      <form class="formEmail" action="" aria-label="Форма входа по email">
         <div class="formEntry">
           <label class="labelInput" for="email"
             >Введите электронную почту</label
@@ -67,17 +62,12 @@
         </div>
 
         <div class="checkboxEntry">
-          <input id="remember" type="checkbox" name="remember"/>
+          <input id="remember" type="checkbox" name="remember" />
           <label class="labelCheckbox" for="remember">Сохранять сессию</label>
         </div>
 
-        <button
-          type="submit"
-          title="Войти по Email"
-          id="Enter"
-        >
-          Войти
-        </button>
+        <div id="error-block"></div>
+        <button type="submit" title="Войти по Email" id="Enter">Войти</button>
       </form>
 
       <form
