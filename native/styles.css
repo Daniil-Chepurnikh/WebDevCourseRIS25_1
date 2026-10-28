@@ -30,6 +30,18 @@ html {
   padding: 0;
 }
 
+#error-block {
+  display: none;
+  color: red;
+  padding: 0;
+  margin-bottom: 1vh;
+  font-size: 0.6rem;
+  font-weight: bold;
+  font-style: italic;
+  width: 100%;
+  max-width: 333px;
+}
+
 button:hover {
   opacity: 0.7;
 }
@@ -54,9 +66,16 @@ button {
 .labelCheckbox {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   font-weight: bold;
   line-height: 1;
+}
+
+.labelInput {
+  font-size: 1rem;
+}
+
+.labelCheckbox {
+  font-size: 0.8rem;
 }
 
 .formEntry {
@@ -72,7 +91,7 @@ button {
   align-items: center;
   gap: 0.1rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1vh;
 }
 
 input[type="checkbox"] {
@@ -84,7 +103,6 @@ input[type="checkbox"] {
   line-height: 0;
   margin: 0;
   padding: 0;
-  font-size: 0.6rem;
 }
 
 .formEntry input {
@@ -131,11 +149,11 @@ form {
 
 .formEmail,
 .formSocialMedia {
-  margin-bottom: 1rem;
+  margin-bottom: 1vh;
 }
 
 .formSocialMedia {
-  gap: 1rem;
+  gap: 1vh;
 }
 
 body {
