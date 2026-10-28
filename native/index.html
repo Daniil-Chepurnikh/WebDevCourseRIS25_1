@@ -1,82 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Лаба форма авторизации">
 
-        <title>Форма авторизации Даниил Чепурных РИС25-1</title>
-        <link rel="stylesheet" href="styles.css"/>
-        <link rel="icon" href="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Форма авторизации Даниил Чепурных РИС25-1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000"
+    />
 
-        <script src="script.js"></script>
-    </head>             
-    
-    <body>
-            <header class = "header">
-               <img id="logo" src="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000"
-               alt="Логотип разработчика формы авторизации" width="150" height="100">  
-            </header>
-            
-            <main class ="main">
-                <h1>Авторизация</h1>
-                <form class="formEmail" method="post" action="" aria-label="Форма входа по email">
-                    
-                    <div class="formEntry">
-                        <label class="labelInput" for="email">Введите электронную почту</label>
-                        <input  required id="email" type="email" name="email" autocomplete="email" placeholder="example@gmail.com">
-                    </div>
-                    
-                    <div class="formEntry">
-                        <label class="labelInput" for="password">Введите пароль</label>
-                        <input required id="password" type="password" name="password" autocomplete="current-password">
-                    </div>
-                    
-                    <div class="checkboxEntry">
-                        <input id="remember" type="checkbox" name="remember" value="on">
-                        <label class="labelCheckbox" for="remember">Сохранять сессию</label>
-                    </div>
-                    
-                    <button type="submit" title="Войти по Email" aria-label="Войти по Email">
-                        Войти</button>
-                </form>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-                <form class="formSocialMedia" aria-label="Форма входа через социальные сети">
-                    <button type="button">Войти через MAX</button>
-                    <button type="button">Войти через Госуслуги</button>
-                </form>
-            </main>
-            
-            <footer>
-                <h2>Связаться со мной</h2>
-                <nav class="contactWithMe">
-                    <ul>
-                        <li>
-                            <a href="https://vk.ru/menyaitakznaut" target="_blank" rel="noopener noreferrer" title="Написать мне в ВКонтакте"
-                            aria-label="VK — написать сообщение в ВКонтакте">
-                            VK
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:daigchepurnykh@edu.hse.ru" title="Написать мне письмо на daigchepurnykh@edu.hse.ru"
-                            aria-label="Написать мне письмо на daigchepurnykh@edu.hse.ru">
-                            daigchepurnykh@edu.hse.ru
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/MenyaITakZnaut" target="_blank" rel="noopener noreferrer" title="Написать мне в Телеграм"
-                            aria-label="TG — написать сообщение в Телеграм">
-                            TG
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <pre>Создано на этапе работы с нативными технологиями</pre>
-            </footer>
-        
-        </body>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        id="logo"
+        src="https://drive.google.com/thumbnail?id=1gYfWMu5BUHkD66j3cP1ovNc2RmEwtIYE&sz=w1000"
+        alt="Логотип разработчика формы авторизации"
+        width="150"
+        height="100"
+      />
+    </header>
+
+    <main class="main">
+      <h1>Авторизация</h1>
+      <form
+        class="formEmail"
+        method="Post"
+        action=""
+        aria-label="Форма входа по email"
+      >
+        <div class="formEntry">
+          <label class="labelInput" for="email"
+            >Введите электронную почту</label
+          >
+          <input
+            required
+            id="email"
+            type="email"
+            name="email"
+            autocomplete="username"
+            placeholder="example@gmail.com"
+          />
+        </div>
+
+        <div class="formEntry">
+          <label class="labelInput" for="password">Введите пароль</label>
+          <input
+            required
+            id="password"
+            type="password"
+            name="password"
+            autocomplete="current-password"
+          />
+        </div>
+
+        <div class="checkboxEntry">
+          <input id="remember" type="checkbox" name="remember"/>
+          <label class="labelCheckbox" for="remember">Сохранять сессию</label>
+        </div>
+
+        <button
+          type="submit"
+          title="Войти по Email"
+          id="Enter"
+        >
+          Войти
+        </button>
+      </form>
+
+      <form
+        class="formSocialMedia"
+        aria-label="Форма входа через социальные сети"
+      >
+        <button type="button" id="MaxEnter">Войти через MAX</button>
+        <button type="button" id="GosuslugiEnter">Войти через Госуслуги</button>
+      </form>
+    </main>
+
+    <footer>
+      <h2>Связаться со мной</h2>
+      <nav class="contactWithMe">
+        <ul>
+          <li>
+            <a
+              href="https://vk.ru/menyaitakznaut"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="VK — написать сообщение в ВКонтакте"
+            >
+              VK
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:daigchepurnykh@edu.hse.ru"
+              aria-label="Написать мне письмо на daigchepurnykh@edu.hse.ru"
+            >
+              daigchepurnykh@edu.hse.ru
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://t.me/MenyaITakZnaut"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TG — написать сообщение в Телеграм"
+            >
+              TG
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <small>Создано на этапе работы с нативными технологиями</small>
+    </footer>
+  </body>
 </html>
