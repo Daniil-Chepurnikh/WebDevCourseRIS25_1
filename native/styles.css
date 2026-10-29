@@ -1,6 +1,3 @@
-/* --- АНИМАЦИИ --- */
-
-/* 1. Появление формы (плавный выезд снизу) */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -13,7 +10,6 @@
   }
 }
 
-/* 2. Тряска для блока с ошибкой */
 @keyframes shake {
   0%,
   100% {
@@ -31,7 +27,6 @@
   }
 }
 
-/* 3. Пульсация для логотипа при наведении */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -45,6 +40,9 @@
     transform: scale(1);
   }
 }
+
+
+
 
 *,
 *::before,
@@ -63,6 +61,9 @@ html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
   scrollbar-gutter: stable;
+  
+  --main-text-color: rgb(46 35 25);
+  --accent-color: rgb(15 66 122);
 }
 
 #logo {
@@ -97,7 +98,7 @@ button,
 
 button {
   font-weight: bolder;
-  color: rgb(46 35 25);
+  color: var(--main-text-color);
   background-color: rgb(217 131 0);
   border: none;
   transition:
@@ -166,7 +167,7 @@ input[type="checkbox"] {
   margin: 0;
   padding: 0;
   line-height: 0;
-  accent-color: rgb(15 66 122);
+  accent-color: var(--accent-color);
 }
 
 input::placeholder {
@@ -178,13 +179,13 @@ input::placeholder {
 }
 
 .formEntry input {
-  border: 2px solid rgb(15 66 122);
+  border: 2px solid var(--accent-color);
 }
 
 h1,
 h2 {
   margin-bottom: 0;
-  color: rgb(15 66 122);
+  color: var(--accent-color);
 }
 
 h1 {
@@ -215,7 +216,7 @@ form {
   margin: auto;
   gap: 0;
   font-size: 1.4rem;
-  color: rgb(46 35 25);
+  color: var(--main-text-color);
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
@@ -240,7 +241,7 @@ body {
 
 footer {
   font-size: 1rem;
-  color: rgb(15 66 122);
+  color: var(--accent-color);
 }
 
 .contactWithMe a {
