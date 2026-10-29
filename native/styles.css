@@ -1,9 +1,50 @@
-/* TODO: Придумать анимации
-@keyframes 
-{
+/* --- АНИМАЦИИ --- */
 
+/* 1. Появление формы (плавный выезд снизу) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-*/
+
+/* 2. Тряска для блока с ошибкой */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+/* 3. Пульсация для логотипа при наведении */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 *,
 *::before,
@@ -18,48 +59,71 @@ a:focus-visible {
 }
 
 html {
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
   scroll-behavior: smooth;
   overscroll-behavior: none;
   scrollbar-gutter: stable;
-  font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
 }
 
 #logo {
-  mix-blend-mode: multiply;
   margin: 0;
   padding: 0;
+  mix-blend-mode: multiply;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  animation: pulse 1s infinite;
 }
 
 #error-block {
   display: none;
-  color: red;
-  padding: 0;
+  width: 100%;
+  max-width: 333px;
   margin-bottom: 1vh;
+  padding: 0;
   font-size: 0.6rem;
   font-weight: bold;
   font-style: italic;
-  width: 100%;
-  max-width: 333px;
+  color: red;
 }
 
-button:hover {
-  opacity: 0.7;
+button,
+.formEntry input {
+  width: 100%;
+  max-width: 333px;
+  border-radius: 12px;
 }
 
 button {
-  width: 100%;
-  max-width: 333px;
   font-weight: bolder;
   color: rgb(46 35 25);
   background-color: rgb(217 131 0);
-  border: 3px solid rgb(15 66 122);
-  border-radius: 12px;
-  transition: all 0.2s ease-in-out;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 }
 
 .formSocialMedia button {
   background-color: rgb(246 176 70);
+}
+
+.formSocialMedia button:hover {
+  background-color: rgb(240 160 50);
 }
 
 .labelInput,
@@ -95,21 +159,32 @@ button {
 }
 
 input[type="checkbox"] {
-  width: 2.5vw;
-  max-width: 15px;
-  max-height: 15px;
-  height: 2.5vh;
-  accent-color: rgb(15 66 122);
-  line-height: 0;
+  width: 3vw;
+  max-width: 25px;
+  height: 3vh;
+  max-height: 25px;
   margin: 0;
   padding: 0;
+  line-height: 0;
+  accent-color: rgb(15 66 122);
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: rgb(117 117 117);
+  opacity: 1;
 }
 
 .formEntry input {
-  width: 100%;
-  max-width: 333px;
   border: 2px solid rgb(15 66 122);
-  border-radius: 12px;
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
+  color: rgb(15 66 122);
 }
 
 h1 {
@@ -118,8 +193,6 @@ h1 {
   padding-left: 1vw;
   font-size: 2.4rem;
   font-weight: bold;
-  color: rgb(217 131 0);
-  margin-bottom: 0;
 }
 
 h2 {
@@ -127,9 +200,7 @@ h2 {
   padding-bottom: 0;
   padding-left: 2vw;
   font-size: 1.5rem;
-  font-weight: 300;
-  color: rgb(217 131 0);
-  margin-bottom: 0;
+  font-weight: 400;
 }
 
 main {
@@ -145,15 +216,16 @@ form {
   gap: 0;
   font-size: 1.4rem;
   color: rgb(46 35 25);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .formEmail,
 .formSocialMedia {
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
 }
 
 .formSocialMedia {
-  gap: 1vh;
+  gap: 3vh;
 }
 
 body {
@@ -172,8 +244,8 @@ footer {
 }
 
 .contactWithMe a {
-  color: inherit;
   font-style: italic;
+  color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
