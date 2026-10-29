@@ -64,13 +64,13 @@ a:focus-visible {
 }
 
 html {
+  --main-text-color: rgb(46 35 25);
+  --accent-color: rgb(15 66 122);
+
   font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
   scroll-behavior: smooth;
   overscroll-behavior: none;
   scrollbar-gutter: stable;
-
-  --main-text-color: rgb(46 35 25);
-  --accent-color: rgb(15 66 122);
 }
 
 #logo {
@@ -100,8 +100,8 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 button,
@@ -113,14 +113,14 @@ button,
 
 button {
   font-weight: bolder;
-  color: var(--main-text-color);
+  color: rgb(0 0 0);
   background-color: rgb(217 131 0);
   border: none;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     background-color 0.2s ease;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   cursor: pointer;
 }
 
@@ -194,7 +194,7 @@ input::placeholder {
 }
 
 .formEntry input {
-  border: 2px solid var(--accent-color);
+  border: 3px solid var(--accent-color);
 }
 
 h1,
@@ -274,9 +274,9 @@ footer {
 .snow-toggle {
   display: flex;
   flex-direction: row;
-  padding: 0;
-  margin: 0;
   gap: 40px;
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -305,8 +305,8 @@ footer {
 .snow-toggle__control {
   width: 25px;
   height: 25px;
-  opacity: 0;
   margin-right: 15px;
+  opacity: 0;
 }
 
 .snow-toggle__control:focus + .snow-toggle__text::before {
