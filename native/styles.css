@@ -1,9 +1,55 @@
-/* TODO: Придумать анимации
-@keyframes 
-{
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-*/
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 1.5em));
+  }
+}
 
 *,
 *::before,
@@ -18,45 +64,98 @@ a:focus-visible {
 }
 
 html {
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
   scroll-behavior: smooth;
   overscroll-behavior: none;
   scrollbar-gutter: stable;
-  font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
+
+  --main-text-color: rgb(46 35 25);
+  --accent-color: rgb(15 66 122);
 }
 
 #logo {
-  mix-blend-mode: multiply;
   margin: 0;
   padding: 0;
+  mix-blend-mode: multiply;
+  transition: transform 0.3s ease;
 }
 
-button:hover {
-  opacity: 0.7;
+#logo:hover {
+  animation: pulse 1s infinite;
+}
+
+#error-block {
+  display: none;
+  width: 100%;
+  max-width: 333px;
+  margin-bottom: 1vh;
+  padding: 0;
+  font-size: 0.6rem;
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+.formEntry input {
+  width: 100%;
+  max-width: 333px;
+  border-radius: 12px;
 }
 
 button {
-  width: 100%;
-  max-width: 333px;
   font-weight: bolder;
-  color: rgb(46 35 25);
+  color: var(--main-text-color);
   background-color: rgb(217 131 0);
-  border: 3px solid rgb(15 66 122);
-  border-radius: 12px;
-  transition: all 0.2s ease-in-out;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 }
 
 .formSocialMedia button {
   background-color: rgb(246 176 70);
 }
 
+.formSocialMedia button:hover {
+  background-color: rgb(240 160 50);
+}
+
 .labelInput,
 .labelCheckbox {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   font-weight: bold;
   line-height: 1;
+}
+
+.labelInput {
+  font-size: 1rem;
+}
+
+.labelCheckbox {
+  font-size: 0.8rem;
 }
 
 .formEntry {
@@ -72,26 +171,36 @@ button {
   align-items: center;
   gap: 0.1rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1vh;
 }
 
 input[type="checkbox"] {
-  width: 2.5vw;
-  max-width: 15px;
-  max-height: 15px;
-  height: 2.5vh;
-  accent-color: rgb(15 66 122);
-  line-height: 0;
+  width: 3vw;
+  max-width: 25px;
+  height: 3vh;
+  max-height: 25px;
   margin: 0;
   padding: 0;
-  font-size: 0.6rem;
+  line-height: 0;
+  accent-color: var(--accent-color);
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: rgb(117 117 117);
+  opacity: 1;
 }
 
 .formEntry input {
-  width: 100%;
-  max-width: 333px;
-  border: 2px solid rgb(15 66 122);
-  border-radius: 12px;
+  border: 2px solid var(--accent-color);
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
+  color: var(--accent-color);
 }
 
 h1 {
@@ -100,8 +209,6 @@ h1 {
   padding-left: 1vw;
   font-size: 2.4rem;
   font-weight: bold;
-  color: rgb(217 131 0);
-  margin-bottom: 0;
 }
 
 h2 {
@@ -109,9 +216,7 @@ h2 {
   padding-bottom: 0;
   padding-left: 2vw;
   font-size: 1.5rem;
-  font-weight: 300;
-  color: rgb(217 131 0);
-  margin-bottom: 0;
+  font-weight: 400;
 }
 
 main {
@@ -126,16 +231,17 @@ form {
   margin: auto;
   gap: 0;
   font-size: 1.4rem;
-  color: rgb(46 35 25);
+  color: var(--main-text-color);
+  animation: fade-in-up 0.6s ease-out forwards;
 }
 
 .formEmail,
 .formSocialMedia {
-  margin-bottom: 1rem;
+  margin-bottom: 3vh;
 }
 
 .formSocialMedia {
-  gap: 1rem;
+  gap: 3vh;
 }
 
 body {
@@ -150,12 +256,12 @@ body {
 
 footer {
   font-size: 1rem;
-  color: rgb(15 66 122);
+  color: var(--accent-color);
 }
 
 .contactWithMe a {
-  color: inherit;
   font-style: italic;
+  color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -163,4 +269,78 @@ footer {
 .contactWithMe ul {
   padding-left: 25px;
   list-style: none;
+}
+
+.snow-toggle {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+  border: 0;
+}
+
+.snow-toggle__label {
+  padding-bottom: 10px;
+}
+
+.snow-toggle__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.snow-toggle__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 12px);
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--main-text-color);
+  border-radius: 50%;
+}
+
+.snow-toggle__control {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  margin-right: 15px;
+}
+
+.snow-toggle__control:focus + .snow-toggle__text::before {
+  border-color: var(--accent-color);
+}
+
+.snow-toggle__control:checked + .snow-toggle__text::before {
+  background-color: var(--accent-color);
+  background: radial-gradient(
+    circle,
+    #000 0%,
+    #000 40%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.snow {
+  --animation-name: snowfall;
+
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.snow__flake {
+  position: relative;
+  top: -1.5em;
+  color: var(--accent-color);
+  animation-name: var(--animation-name);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
 }
