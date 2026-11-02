@@ -27,7 +27,7 @@ if (mainForm) {
     const password = mainForm.elements.password.value;
     const remember = mainForm.elements.remember.checked;
 
-    if(!email || !password || !remember) return;
+    if(!email || !password) return;
     
     if (!isCorrectPassword(password)) {
       showUserError(`Ошибка! Длина вашего пароля: ${password.length}. Длина пароля должна быть хотя бы 8 символов!`);
