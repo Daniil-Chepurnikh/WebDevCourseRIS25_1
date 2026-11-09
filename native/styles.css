@@ -99,9 +99,17 @@ html {
 .up {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
+  justify-content: end;
+  margin-right: 2vw;
   padding: 0;
+}
+
+.auth {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button,
@@ -144,7 +152,7 @@ button:active {
 
 .labelInput,
 .labelCheckbox {
-  margin: 0;
+  margin: 0.1vh;
   padding: 0;
   font-weight: bold;
   line-height: 1;
@@ -161,6 +169,7 @@ button:active {
 .formEntry {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.1rem;
   margin-bottom: 1rem;
 }
@@ -177,8 +186,10 @@ button:active {
 input[type="checkbox"] {
   width: 3vw;
   max-width: 25px;
+  min-width: 10px;
   height: 3vh;
   max-height: 25px;
+  min-height: 10px;
   margin: 0;
   padding: 0;
   line-height: 0;
@@ -226,6 +237,7 @@ main {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 777px;
   margin: auto;

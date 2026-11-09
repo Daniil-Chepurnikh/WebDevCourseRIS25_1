@@ -17,7 +17,6 @@ if (buttonGosuslugi) {
   buttonGosuslugi.addEventListener("click", OnGosuslugiButtonClick);
 }
 
-
 const mainForm = document.querySelector(".formEmail");
 if (mainForm) {
   mainForm.addEventListener("submit", (e) => {
@@ -27,10 +26,12 @@ if (mainForm) {
     const password = mainForm.elements.password.value;
     const remember = mainForm.elements.remember.checked;
 
-    if(!email || !password) return;
-    
+    if (!email || !password) return;
+
     if (!isCorrectPassword(password)) {
-      showUserError(`Ошибка! Длина вашего пароля: ${password.length}. Длина пароля должна быть хотя бы 8 символов!`);
+      showUserError(
+        `Ошибка! Длина вашего пароля: ${password.length}. Длина пароля должна быть хотя бы 8 символов!`,
+      );
     } else {
       alert("Кнопка нажата!");
     }
@@ -40,22 +41,22 @@ if (mainForm) {
 }
 
 /**
- * @param {string} name
+ * @param {string} error
  */
-function showUserError(name) {
+function showUserError(error) {
   const errorEl = document.getElementById("error-block");
 
-   if (!errorEl) return;
-  
-  // 1. Задаем текст ошибки
-  errorEl.textContent = name;
+  if (!errorEl) return;
 
-  // 2. Делаем блок видимым
+  // Задаем текст ошибки
+  errorEl.textContent = error;
+
+  // Делаем блок видимым
   errorEl.style.display = "block";
 
   setTimeout(() => {
-    errorEl.style.display = 'none'; // Скрываем блок
-}, 9000);
+    errorEl.style.display = "none"; // Скрываем блок
+  }, 9000);
 }
 
 /**
@@ -66,18 +67,17 @@ const isCorrectPassword = (password) => password.length >= 8;
 
 //#region Снегопад из лекции
 
-
-const storageKey = 'snow'
-const snow = document.querySelector('.snow')
-const snowflakes = document.querySelectorAll('.snow__flake')
-const snowToggle = document.querySelector('.snow-toggle')
+const storageKey = "snow";
+const snow = document.querySelector(".snow");
+const snowflakes = document.querySelectorAll(".snow__flake");
+const snowToggle = document.querySelector(".snow-toggle");
 
 /**
  * @param {number} min
  * @param {number} max
  */
 function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -85,36 +85,39 @@ function getRndInteger(min, max) {
  * @param {number} max
  */
 function getRndFloat(min, max) {
-  return (Math.random() * (max - min) + min).toFixed(1)
+  return (Math.random() * (max - min) + min).toFixed(1);
 }
 
-snowflakes.forEach(snowflake => {
-  snowflake.style.fontSize = getRndFloat(0.7, 1.5) + 'em'
-  snowflake.style.animationDuration = getRndInteger(20, 30) + 's'
-  snowflake.style.animationDelay = getRndInteger(-1, snowflakes.length / 2) + 's'
-})
+snowflakes.forEach((snowflake) => {
+  snowflake.style.fontSize = getRndFloat(0.7, 1.5) + "em";
+  snowflake.style.animationDuration = getRndInteger(20, 30) + "s";
+  snowflake.style.animationDelay =
+    getRndInteger(-1, snowflakes.length / 2) + "s";
+});
 
 function changeSnowAnimation(animationName) {
-  snow.style.setProperty('--animation-name',  animationName)
+  snow.style.setProperty("--animation-name", animationName);
 }
 
-snowToggle.addEventListener('change', event => {
-  changeSnowAnimation(event.target.value)
-  localStorage.setItem(storageKey, event.target.value)
-})
+snowToggle.addEventListener("change", (event) => {
+  changeSnowAnimation(event.target.value);
+  localStorage.setItem(storageKey, event.target.value);
+});
 
-document.addEventListener('DOMContentLoaded', () => {
-  let currentStorage = localStorage.getItem(storageKey)
+document.addEventListener("DOMContentLoaded", () => {
+  let currentStorage = localStorage.getItem(storageKey);
 
   if (currentStorage) {
-    snowToggle.querySelector(`.snow-toggle__control[value='${currentStorage}']`).checked = true
+    snowToggle.querySelector(
+      `.snow-toggle__control[value='${currentStorage}']`,
+    ).checked = true;
   }
 
-  changeSnowAnimation(currentStorage)
+  changeSnowAnimation(currentStorage);
 
-  window.addEventListener('storage', () => {
-    changeSnowAnimation(localStorage.getItem(storageKey))
-  })
-})
+  window.addEventListener("storage", () => {
+    changeSnowAnimation(localStorage.getItem(storageKey));
+  });
+});
 
 //#endregion

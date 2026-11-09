@@ -35,8 +35,6 @@
 
     <main class="main">
       <div class="up">
-        <div><h1>Авторизация</h1></div>
-
         <div>
           <fieldset class="snow-toggle">
             <legend class="snow-toggle__label">Переключатель снегопада</legend>
@@ -63,48 +61,54 @@
         </div>
       </div>
 
-      <form class="formEmail" action="" aria-label="Форма входа по email">
-        <div class="formEntry">
-          <label class="labelInput" for="email"
-            >Введите электронную почту</label
-          >
-          <input
-            required
-            id="email"
-            type="email"
-            name="email"
-            autocomplete="username"
-            placeholder="example@gmail.com"
-          />
-        </div>
+      <div class="auth">
+        <div><h1>Авторизация</h1></div>
 
-        <div class="formEntry">
-          <label class="labelInput" for="password">Введите пароль</label>
-          <input
-            required
-            id="password"
-            type="password"
-            name="password"
-            autocomplete="current-password"
-          />
-        </div>
+        <form class="formEmail" action="" aria-label="Форма входа по email">
+          <div class="formEntry">
+            <label class="labelInput" for="email"
+              >Введите электронную почту</label
+            >
+            <input
+              required
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="username"
+              placeholder="example@gmail.com"
+            />
+          </div>
 
-        <div class="checkboxEntry">
-          <input id="remember" type="checkbox" name="remember" />
-          <label class="labelCheckbox" for="remember">Сохранять сессию</label>
-        </div>
+          <div class="formEntry">
+            <label class="labelInput" for="password">Введите пароль</label>
+            <input
+              required
+              id="password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+            />
+          </div>
 
-        <div id="error-block"></div>
-        <button type="submit" title="Войти по Email" id="Enter">Войти</button>
-      </form>
+          <div class="checkboxEntry">
+            <input id="remember" type="checkbox" name="remember" />
+            <label class="labelCheckbox" for="remember">Запомнить меня</label>
+          </div>
 
-      <form
-        class="formSocialMedia"
-        aria-label="Форма входа через социальные сети"
-      >
-        <button type="button" id="MaxEnter">Войти через MAX</button>
-        <button type="button" id="GosuslugiEnter">Войти через Госуслуги</button>
-      </form>
+          <div id="error-block"></div>
+          <button type="submit" title="Войти по Email" id="Enter">Войти</button>
+        </form>
+
+        <form
+          class="formSocialMedia"
+          aria-label="Форма входа через социальные сети"
+        >
+          <button type="button" id="MaxEnter">Войти через MAX</button>
+          <button type="button" id="GosuslugiEnter">
+            Войти через Госуслуги
+          </button>
+        </form>
+      </div>
     </main>
 
     <footer>
