@@ -39,6 +39,12 @@ if (mainForm) {
       alert("Кнопка нажата!");
     }
 
+    if (!isCorrectData(email, password)) {
+      showUserError("Ошибка! Введена неверная пара логин/пароль.");
+    } else {
+      alert("Данные верны! Доступ разрешен.");
+    }
+
     mainForm.reset();
   });
 }
