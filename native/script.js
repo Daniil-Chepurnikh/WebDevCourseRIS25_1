@@ -1,3 +1,6 @@
+const CORRECT_USERNAME = "admin@example.com";
+const CORRECT_PASSWORD = "supersecure123";
+
 function OnMaxButtonClick() {
   alert("Кнопка MAX нажата!");
 }
@@ -64,6 +67,14 @@ function showUserError(error) {
  * @returns {boolean}
  */
 const isCorrectPassword = (password) => password.length >= 8;
+
+/**
+ * @param {string} username
+ * @param {string} password
+ * @returns {boolean}
+ */
+const isCorrectData = (username, password) => username === CORRECT_USERNAME && 
+password === CORRECT_PASSWORD;
 
 //#region Снегопад из лекции
 
