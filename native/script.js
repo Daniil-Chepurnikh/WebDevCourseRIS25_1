@@ -73,8 +73,8 @@ const isCorrectPassword = (password) => password.length >= 8;
  * @param {string} password
  * @returns {boolean}
  */
-const isCorrectData = (username, password) => username === CORRECT_USERNAME && 
-password === CORRECT_PASSWORD;
+const isCorrectData = (username, password) =>
+  username === CORRECT_USERNAME && password === CORRECT_PASSWORD;
 
 //#region Снегопад из лекции
 
