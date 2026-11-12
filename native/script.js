@@ -30,7 +30,7 @@ if (mainForm) {
 
     if (!isCorrectPassword(password)) {
       showUserError(
-        `Ошибка! Длина вашего пароля: ${password.length}. Длина пароля должна быть хотя бы 8 символов!`,
+        `Ошибка! Длина вашего пароля: ${password.length} символа. Длина пароля должна быть хотя бы 8 символов!`,
       );
     } else {
       alert("Кнопка нажата!");
