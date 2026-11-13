@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Лаба форма авторизации">
+    <meta name="description" content="Лаба форма авторизации" />
 
     <title>Форма авторизации Даниил Чепурных РИС25-1</title>
     <link rel="stylesheet" href="styles.css" />
@@ -34,59 +34,81 @@
     </header>
 
     <main class="main">
-      <h1>Авторизация</h1>
-      <form
-        class="formEmail"
-        method="Post"
-        action=""
-        aria-label="Форма входа по email"
-      >
-        <div class="formEntry">
-          <label class="labelInput" for="email"
-            >Введите электронную почту</label
-          >
-          <input
-            required
-            id="email"
-            type="email"
-            name="email"
-            autocomplete="username"
-            placeholder="example@gmail.com"
-          />
+      <div class="up">
+        <div>
+          <fieldset class="snow-toggle">
+            <legend class="snow-toggle__label">Переключатель снегопада</legend>
+            <label class="snow-toggle__item">
+              <input
+                class="snow-toggle__control"
+                type="radio"
+                name="snow"
+                value="snowfall"
+                checked
+              />
+              <span class="snow-toggle__text">Снег</span>
+            </label>
+            <label class="snow-toggle__item">
+              <input
+                class="snow-toggle__control"
+                type="radio"
+                name="snow"
+                value="none"
+              />
+              <span class="snow-toggle__text">Нет снега</span>
+            </label>
+          </fieldset>
         </div>
+      </div>
 
-        <div class="formEntry">
-          <label class="labelInput" for="password">Введите пароль</label>
-          <input
-            required
-            id="password"
-            type="password"
-            name="password"
-            autocomplete="current-password"
-          />
-        </div>
+      <div class="auth">
+        <div><h1>Авторизация</h1></div>
 
-        <div class="checkboxEntry">
-          <input id="remember" type="checkbox" name="remember"/>
-          <label class="labelCheckbox" for="remember">Сохранять сессию</label>
-        </div>
+        <form class="formEmail" action="" aria-label="Форма входа по email">
+          <div class="formEntry">
+            <label class="labelInput" for="email"
+              >Введите электронную почту</label
+            >
+            <input
+              required
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="username"
+              placeholder="example@gmail.com"
+            />
+          </div>
 
-        <button
-          type="submit"
-          title="Войти по Email"
-          id="Enter"
+          <div class="formEntry">
+            <label class="labelInput" for="password">Введите пароль</label>
+            <input
+              required
+              id="password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <div class="checkboxEntry">
+            <input id="remember" type="checkbox" name="remember" />
+            <label class="labelCheckbox" for="remember">Запомнить меня</label>
+          </div>
+
+          <div id="error-block"></div>
+          <button type="submit" title="Войти по Email" id="Enter">Войти</button>
+        </form>
+
+        <form
+          class="formSocialMedia"
+          aria-label="Форма входа через социальные сети"
         >
-          Войти
-        </button>
-      </form>
-
-      <form
-        class="formSocialMedia"
-        aria-label="Форма входа через социальные сети"
-      >
-        <button type="button" id="MaxEnter">Войти через MAX</button>
-        <button type="button" id="GosuslugiEnter">Войти через Госуслуги</button>
-      </form>
+          <button type="button" id="MaxEnter">Войти через MAX</button>
+          <button type="button" id="GosuslugiEnter">
+            Войти через Госуслуги
+          </button>
+        </form>
+      </div>
     </main>
 
     <footer>
@@ -125,5 +147,64 @@
       </nav>
       <small>Создано на этапе работы с нативными технологиями</small>
     </footer>
+
+    <div class="snow" aria-hidden="true">
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+      <div class="snow__flake">*</div>
+    </div>
   </body>
 </html>
