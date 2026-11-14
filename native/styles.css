@@ -3,51 +3,38 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
-
-  20%,
-  60% {
+  20%, 60% {
     transform: translateX(-6px);
   }
-
-  40%,
-  80% {
+  40%, 80% {
     transform: translateX(6px);
   }
 }
-
 @keyframes pulse {
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.05);
   }
 }
-
 @keyframes snowfall {
   0% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(calc(100vh + 1.5em));
   }
 }
-
 *,
 *::before,
 *::after {
@@ -55,9 +42,8 @@
 }
 
 html {
-  --main-text-color: rgb(46 35 25);
-  --accent-color: rgb(15 66 122);
-
+  --main-text-color: rgb(46, 35, 25);
+  --accent-color: rgb(15, 66, 122);
   font-size: clamp(1rem, 0.8rem + 1vw, 1.25rem);
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -73,7 +59,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans", sans-serif;
-  background-color: rgb(249 246 240);
+  background-color: rgb(249, 246, 240);
 }
 
 main {
@@ -102,7 +88,7 @@ h2 {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgb(15 66 122);
+  outline: 3px solid rgb(15, 66, 122);
   outline-offset: 2px;
 }
 
@@ -111,28 +97,23 @@ button {
   max-width: 333px;
   border-radius: 12px;
   font-weight: bolder;
-  color: rgb(0 0 0);
-  background-color: rgb(217 131 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(217, 131, 0);
   border: none;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
-
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 button:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   width: 3vw;
   max-width: 25px;
   min-width: 10px;
@@ -144,12 +125,11 @@ input[type="checkbox"] {
   line-height: 0;
   accent-color: var(--accent-color);
 }
-
 input::placeholder {
   font-size: 0.8rem;
   font-weight: 500;
   font-style: italic;
-  color: rgb(117 117 117);
+  color: rgb(117, 117, 117);
   opacity: 1;
 }
 
@@ -159,7 +139,6 @@ input::placeholder {
   mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
-
 #logo:hover {
   animation: pulse 1s infinite;
 }
@@ -215,7 +194,6 @@ form {
   gap: 0.1rem;
   margin-bottom: 1rem;
 }
-
 .formEntry input {
   width: 100%;
   max-width: 333px;
@@ -256,13 +234,11 @@ form {
 .formSocialMedia {
   gap: 3vh;
 }
-
 .formSocialMedia button {
-  background-color: rgb(246 176 70);
+  background-color: rgb(246, 176, 70);
 }
-
 .formSocialMedia button:hover {
-  background-color: rgb(240 160 50);
+  background-color: rgb(240, 160, 50);
 }
 
 footer {
@@ -276,7 +252,6 @@ footer {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
-
 .contactWithMe ul {
   padding-left: 25px;
   list-style: none;
@@ -292,18 +267,15 @@ footer {
   padding: 0;
   border: 0;
 }
-
 .snow-toggle__label {
   padding-bottom: 10px;
 }
-
 .snow-toggle__item {
   position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-
 .snow-toggle__text::before {
   content: "";
   position: absolute;
@@ -314,32 +286,22 @@ footer {
   border: 1px solid var(--main-text-color);
   border-radius: 50%;
 }
-
 .snow-toggle__control {
   width: 25px;
   height: 25px;
   margin-right: 15px;
   opacity: 0;
 }
-
 .snow-toggle__control:focus + .snow-toggle__text::before {
   border-color: var(--accent-color);
 }
-
 .snow-toggle__control:checked + .snow-toggle__text::before {
   background-color: var(--accent-color);
-  background: radial-gradient(
-    circle,
-    #000 0%,
-    #000 40%,
-    transparent 50%,
-    transparent 100%
-  );
+  background: radial-gradient(circle, #000 0%, #000 40%, transparent 50%, transparent 100%);
 }
 
 .snow {
   --animation-name: snowfall;
-
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -347,7 +309,6 @@ footer {
   justify-content: space-between;
   pointer-events: none;
 }
-
 .snow__flake {
   position: relative;
   top: -1.5em;

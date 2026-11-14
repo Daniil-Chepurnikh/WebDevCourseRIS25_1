@@ -1,9 +1,7 @@
 export default {
-  extends: ["stylelint-config-standard"],
+  extends: ["stylelint-config-standard-scss"],
   rules: {
-    "color-no-invalid-hex": true,
-    "declaration-block-no-duplicate-properties": true,
     "selector-class-pattern": null,
-    "no-descending-specificity": null,
+    "selector-id-pattern": null,
   },
 };
