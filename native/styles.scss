@@ -346,7 +346,6 @@ footer {
     }
 
     &:checked + .snow-toggle__text::before {
-      background-color: var(--accent-color);
       background: radial-gradient(
         circle,
         #000 0%,
