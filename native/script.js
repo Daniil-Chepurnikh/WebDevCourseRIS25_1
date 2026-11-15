@@ -1,5 +1,5 @@
 const CORRECT_USERNAME = "admin@example.com";
-const CORRECT_PASSWORD = "supersecure123";
+const CORRECT_PASSWORD = "CristianoRonaldo7";
 
 function OnMaxButtonClick() {
   alert("Кнопка MAX нажата!");
@@ -33,13 +33,9 @@ if (mainForm) {
 
     if (!isCorrectPassword(password)) {
       showUserError(
-        `Ошибка! Длина вашего пароля: ${password.length} символа(ов). Длина пароля должна быть хотя бы 8 символов!`,
+        `Ошибка! Длина вашего пароля: ${password.length} символ(а/ов). Длина пароля должна быть хотя бы 8 символов!`,
       );
-    } else {
-      alert("Кнопка нажата!");
-    }
-
-    if (!isCorrectData(email, password)) {
+    } else if (!isCorrectData(email, password)) {
       showUserError("Ошибка! Введена неверная пара логин/пароль.");
     } else {
       alert("Данные верны! Доступ разрешен.");
