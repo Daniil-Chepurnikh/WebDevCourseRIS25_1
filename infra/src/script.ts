@@ -20,14 +20,13 @@ if (buttonGosuslugi) {
   buttonGosuslugi.addEventListener("click", OnGosuslugiButtonClick);
 }
 
-const mainForm = document.querySelector(".formEmail");
+const mainForm = document.querySelector<HTMLFormElement>(".formEmail");
 if (mainForm) {
   mainForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const email = mainForm.elements.email.value.trim();
-    const password = mainForm.elements.password.value;
-    const remember = mainForm.elements.remember.checked;
+    const email = (mainForm.elements.namedItem("email") as HTMLInputElement | null)?.value.trim() ?? "";
+    const password = (mainForm.elements.namedItem("password") as HTMLInputElement | null)?.value ?? "";
 
     if (!email || !password) return;
 
@@ -50,14 +49,11 @@ function showUserError(error: string) {
 
   if (!errorEl) return;
 
-  // Задаем текст ошибки
   errorEl.textContent = error;
-
-  // Делаем блок видимым
   errorEl.style.display = "block";
 
   setTimeout(() => {
-    errorEl.style.display = "none"; // Скрываем блок
+    errorEl.style.display = "none";
   }, 9000);
 }
 
@@ -69,9 +65,9 @@ const isCorrectData = (username: string, password: string) =>
 //#region Снегопад из лекции
 
 const storageKey = "snow";
-const snow = document.querySelector(".snow");
-const snowflakes = document.querySelectorAll(".snow__flake");
-const snowToggle = document.querySelector(".snow-toggle");
+const snow = document.querySelector<HTMLElement>(".snow");
+const snowflakes = document.querySelectorAll<HTMLElement>(".snow__flake");
+const snowToggle = document.querySelector<HTMLFieldSetElement>(".snow-toggle");
 
 function getRndInteger(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -89,21 +85,23 @@ snowflakes.forEach((snowflake) => {
 });
 
 function changeSnowAnimation(animationName: string | null) {
-  snow.style.setProperty("--animation-name", animationName);
+  snow?.style.setProperty("--animation-name", animationName);
 }
 
-snowToggle.addEventListener("change", (event) => {
-  changeSnowAnimation(event.target.value);
-  localStorage.setItem(storageKey, event.target.value);
+snowToggle?.addEventListener("change", (event) => {
+  const value = (event.target as HTMLInputElement).value;
+  changeSnowAnimation(value);
+  localStorage.setItem(storageKey, value);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const currentStorage = localStorage.getItem(storageKey);
 
   if (currentStorage) {
-    snowToggle.querySelector(
+    const control = snowToggle?.querySelector<HTMLInputElement>(
       `.snow-toggle__control[value='${currentStorage}']`,
-    ).checked = true;
+    );
+    if (control) control.checked = true;
   }
 
   changeSnowAnimation(currentStorage);
