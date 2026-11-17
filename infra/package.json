@@ -12,7 +12,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint ./src",
-    "lint:fix": "lint --fix",
+    "lint:fix": "eslint ./src --fix",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
