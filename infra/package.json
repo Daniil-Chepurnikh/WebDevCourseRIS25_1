@@ -16,5 +16,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-  }
+  },
+
+  "engines": {
+  "yarn": ">=4.18.1"
+}
 }
