@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Yarn files and cache
+.yarn/
+
+# Test coverage
+coverage/
+
+# Package manager lockfile
+yarn.lock

@@ -1,39 +1,39 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-  // File Layout (ваши настройки)
-  // "rootDir": "./src",
-  // "outDir": "./dist",
+    // File Layout (ваши настройки)
+    // "rootDir": "./src",
+    // "outDir": "./dist",
 
-  // Environment Settings
-  "module": "nodenext",
-  "target": "esnext",
-  "types": [],
+    // Environment Settings
+    "module": "nodenext",
+    "target": "esnext",
+    "types": [],
 
-  // Other Outputs
-  "sourceMap": true,
-  "declaration": true,
-  "declarationMap": true,
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
 
-  // Stricter Typechecking Options
-  "strict": true,
-  "noUncheckedIndexedAccess": true,
-  "exactOptionalPropertyTypes": true,
-  "noImplicitReturns": true,
-  "noFallthroughCasesInSwitch": true,
-  "noImplicitOverride": true,
-  "noPropertyAccessFromIndexSignature": true,
+    // Stricter Typechecking Options
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
 
-  // Style Options
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
+    // Style Options
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
 
-  // Recommended Options
-  "jsx": "react-jsx",
-  "verbatimModuleSyntax": true,
-  "isolatedModules": true,
-  "noUncheckedSideEffectImports": true,
-  "moduleDetection": "force",
-  "skipLibCheck": true,
-}
+    // Recommended Options
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  }
 }

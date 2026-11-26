@@ -25,8 +25,13 @@ if (mainForm) {
   mainForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const email = (mainForm.elements.namedItem("email") as HTMLInputElement | null)?.value.trim() ?? "";
-    const password = (mainForm.elements.namedItem("password") as HTMLInputElement | null)?.value ?? "";
+    const email =
+      (
+        mainForm.elements.namedItem("email") as HTMLInputElement | null
+      )?.value.trim() ?? "";
+    const password =
+      (mainForm.elements.namedItem("password") as HTMLInputElement | null)
+        ?.value ?? "";
 
     if (!email || !password) return;
 
