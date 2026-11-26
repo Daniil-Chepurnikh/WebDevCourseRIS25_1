@@ -1,10 +1,8 @@
-// добавить stylistic ESLint
-
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import { defineConfig } from "eslint/config";
-import stylistic from "@stylistic/eslint-plugin";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
   {
@@ -12,7 +10,6 @@ export default defineConfig([
 
     plugins: {
       js,
-      "@stylistic": stylistic,
     },
 
     extends: ["js/recommended"],
@@ -21,13 +18,14 @@ export default defineConfig([
   },
 
   tseslint.configs.recommended,
+
   {
     rules: {
       eqeqeq: "off",
       "no-unused-vars": "error",
       "prefer-const": ["error", { ignoreReadBeforeAssign: true }],
-      quotes: ["error", "double"],
-      "@stylistic/indent": ["error", 2],
     },
   },
+
+  eslintConfigPrettier,
 ]);
