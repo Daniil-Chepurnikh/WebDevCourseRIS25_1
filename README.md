@@ -163,3 +163,7 @@ const CORRECT_PASSWORD = "CristianoRonaldo7";
 ### React
 
 Установлен `React` актуальной версии. Установлены все инструменты, которые использовались в прошлых частях работы.
+
+<p>
+<img src="infra/public/logoDC.png" alt="Мой логотипчик" />
+</p>
